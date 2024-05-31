@@ -1,3 +1,52 @@
+<?php
+    include('includes/config.php'); 
+
+    // Define variables and set to empty values
+    $usernameErr = $passwordErr = $successMsg = $errorMsg = "";
+    $username = $password = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Validate input
+        if (empty($_POST["txtUsername"])) {
+            $usernameErr = "Username harus diisi";
+        } else {
+            $username = test_input($_POST["txtUsername"]);
+        }
+
+        if (empty($_POST["txtPassword"])) {
+            $passwordErr = "Password harus diisi";
+        } else {
+            $password = test_input($_POST["txtPassword"]);
+        }
+
+        // Insert data into the database
+        if (empty($usernameErr) && empty($passwordErr)) {
+            $stmt = $con->prepare("INSERT INTO admin (username, password) VALUES (?, ?)");
+            $stmt->bind_param("ss", $username, $password);
+
+            if ($stmt->execute()) {
+                // Redirect to index.php if the insertion is successful
+                header("Location: index.php");
+                exit(); // Ensure no further code is executed after the redirect
+            } else {
+                $errorMsg = "Error: " . $stmt->error;
+            }
+
+            $stmt->close();
+		}
+    }
+
+    // Function to sanitize user input
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +79,7 @@
 
 								<div class="form-group">
 									<label for="password">Password</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<input id="password" type="password" class="form-control" name="txtPassword" required data-eye>
 									<div class="invalid-feedback">
 										Password harus diisi
 									</div>
@@ -40,6 +89,7 @@
 									<button type="submit" class="btn btn-primary btn-block">
 										Register
 									</button>
+									<span class="error_message"><?php echo $usernameErr; echo $passwordErr; echo $successMsg; echo $errorMsg; ?></span>
 								</div>
 								<div class="mt-4 text-center">
 									Sudah punya akun? <a href="index.php">Login</a>
