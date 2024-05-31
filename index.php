@@ -89,6 +89,7 @@
 		</select>
 		</div>
 	</li>
+	<li><a>Registrasi</a></li>
 	<li>
 		<input type="submit" value="Login" class="submit_button" /> <span class="error_message"> <?php echo $loginErr; echo $reqErr; ?> </span>
 	</li>
