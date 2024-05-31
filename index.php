@@ -63,7 +63,8 @@
 <html>
 <head>
 	<title> Login </title>
-	<link rel="stylesheet" href="includes/main_style.css" >
+	<!-- <link rel="stylesheet" href="includes/main_style.css" > -->
+	<link rel="stylesheet" href="includes/login.css" >
 </head>
 <body class="login-box">
 	<h1>LOGIN</h1>
@@ -89,7 +90,7 @@
 		</select>
 		</div>
 	</li>
-	<li><a>Registrasi</a></li>
+	<li><a href="register.php">Registrasi</a></li>
 	<li>
 		<input type="submit" value="Login" class="submit_button" /> <span class="error_message"> <?php echo $loginErr; echo $reqErr; ?> </span>
 	</li>
