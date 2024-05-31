@@ -3,7 +3,7 @@
 <td id="td_aside">
 
 <aside>
-	<a href="../retailer/order_items.php">Order Baru</a><!--
+	<a href="../retailer/order_items.php">Pesanan Baru</a><!--
 	--><a href="../retailer/edit_profile.php">Edit Profil</a>
 </aside>
 

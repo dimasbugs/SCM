@@ -4,7 +4,7 @@
 			return true;
 		}
 		else {
-			return "* Invalid Email";
+			return "* Email Invalid ";
 		}
 	}
 	function validate_name($name) {
@@ -12,7 +12,7 @@
 			return true;
 		}
 		else {
-			return "* Invalid Name";
+			return "* Nama Invalid";
 		}
 	}
 	function validate_password($password) {
@@ -20,7 +20,7 @@
 			return true;
 		}
 		else {
-			return "* Only 5-30 characters allowed";
+			return "* Gunakan 5-30 karakter";
 		}
 	}
 	function validate_phone($phone) {
@@ -28,7 +28,7 @@
 			return true;
 		}
 		else {
-			return "* Invalid Phone Number";
+			return "* No. telp Invalid";
 		}
 	}
 	function validate_number($number) {
@@ -36,7 +36,7 @@
 			return true;
 		}
 		else {
-			return "* Invalid number";
+			return "* Nomor Invalid ";
 		}
 	}
 	function validate_price($price) {
@@ -44,7 +44,7 @@
 			return true;
 		}
 		else {
-			return "* Invalid Price";
+			return "* Harga Invalid ";
 		}
 	}
 	function validate_username($username) {
@@ -52,7 +52,7 @@
 			return true;
 		}
 		else {
-			return "* 5-14 characters, Only Alphabets & Numbers allowed";
+			return "* 5-14 karakter, gunakan huruf dan angka saja";
 		}
 	}
 ?>

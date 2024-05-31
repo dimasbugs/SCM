@@ -6,6 +6,6 @@ width: 1000px;
 	background:#776d6d;
 }
 
-	--><a href="../admin/view_distributor.php">Distributors</a><!--
+	--><a href="../admin/view_distributor.php">Distributor</a><!--
 
-		--><a href="../manufacturer/view_distributor.php">Distributors</a><!--
+		--><a href="../manufacturer/view_distributor.php">Distributor</a><!--
