@@ -99,17 +99,15 @@
 								</div>
 
 								<div class="form-group">
-								<ul>
-									<div class="input-box">
+								<div class="selectdiv">
+								<label>
 									<select name="login_type" id="login:type">
-									<option value="" disabled selected>-- Role --</option>
-									<option value="retailer">Pelanggan</option>
-									<option value="manufacturer">Store</option>
-									<option value="admin">Admin</option>
-									<!-- <option value="admin">Distributor</option> -->
+										<option value="admin" selected> Admin </option>
+										<option value="manufacturer">Store</option>
+										<option value="retailer">Pelanggan</option>
 									</select>
-									</div>
-								</ul>
+								</label>
+								</div>
 								</div>
 
 								<div class="form-group m-0">
