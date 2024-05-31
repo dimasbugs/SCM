@@ -63,8 +63,7 @@
 <html>
 <head>
 	<title> Login </title>
-	<!-- <link rel="stylesheet" href="includes/main_style.css" > -->
-	<link rel="stylesheet" href="includes/login.css" >
+	<link rel="stylesheet" href="includes/main_style.css" >
 </head>
 <body class="login-box">
 	<h1>LOGIN</h1>
