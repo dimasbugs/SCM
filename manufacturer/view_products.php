@@ -12,7 +12,7 @@
 						$result = mysqli_query($con,$query_deleteProduct);
 					}
 					if(!$result) {
-						echo "<script> alert(\"Can not delete the product which has been order by retailer\"); </script>";
+						echo "<script> alert(\"Tidak dapat menghapus produk yang telah dipesan\"); </script>";
 						header('Refresh:0');
 					}
 					else {

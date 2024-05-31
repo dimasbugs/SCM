@@ -17,14 +17,14 @@
 							$result_selectInvoice = mysqli_query($con,$query_selectInvoice);
 							$row_selectInvoice = mysqli_fetch_array($result_selectInvoice);
 							if(empty($row_selectInvoice)){
-							   $error = "* No invoice was found with this ID";
+							   $error = "* ID pada invoice tidak ditemukan";
 							}
 							else {
 								mysqli_data_seek($result_selectInvoice,0);
 							}
 						}
 						else {
-							$error = "* Invalid ID";
+							$error = "* ID Invalid ";
 						}
 					}
 					else if(!empty($_POST['txtOrderId'])) {
@@ -35,14 +35,14 @@
 							$result_selectInvoice = mysqli_query($con,$query_selectInvoice);
 							$row_selectInvoice = mysqli_fetch_array($result_selectInvoice);
 							if(empty($row_selectInvoice)){
-							   $error = "* No invoice was found with this ID";
+							   $error = "* ID pada invoice tidak ditemukan";
 							}
 							else {
 								mysqli_data_seek($result_selectInvoice,0);
 							}
 						}
 						else {
-							$error = "* Invalid ID";
+							$error = "*  ID Invalid";
 						}
 					}
 					else if(!empty($_POST['cmbRetailer'])) {
@@ -51,7 +51,7 @@
 						$result_selectInvoice = mysqli_query($con,$query_selectInvoice);
 						$row_selectInvoice = mysqli_fetch_array($result_selectInvoice);
 						if(empty($row_selectInvoice)){
-						   $error = "* No invoice was found of the selected Retailer";
+						   $error = "* Pelanggan pada invoice tidak ditemukan";
 						}
 						else {
 							mysqli_data_seek($result_selectInvoice,0);
@@ -63,7 +63,7 @@
 						$result_selectInvoice = mysqli_query($con,$query_selectInvoice);
 						$row_selectInvoice = mysqli_fetch_array($result_selectInvoice);
 						if(empty($row_selectInvoice)){
-						   $error = "* No invoice was found with the selected Date";
+						   $error = "* Tanggal pada invoice tidak ditemukan";
 						}
 						else {
 							mysqli_data_seek($result_selectInvoice,0);
@@ -71,11 +71,11 @@
 						
 					}
 					else {
-						$error = "* Please enter the data to search for.";
+						$error = "* Pilih data yang akan dicari";
 					}
 				}
 				else {
-					$error = "Please choose an option to search for.";
+					$error = "Pilih opsi yang akan dicari";
 				}
 			}
 			else {
@@ -91,7 +91,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Lihat Invoices </title>
+	<title> Lihat Invoice </title>
 	<link rel="stylesheet" href="../includes/main_style.css" >
 	<link rel="stylesheet" href="css/smoothness/jquery-ui.css">
 	<script type="text/javascript" src="../includes/jquery.js"> </script>

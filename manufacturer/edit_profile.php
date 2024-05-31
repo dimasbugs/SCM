@@ -52,7 +52,7 @@
 					}
 				}
 				else {
-					$requireErr = "* Valid Name & Phone is compulsory";
+					$requireErr = "* Nama atau no. telp tidak valid";
 				}
 		}
 	}
@@ -86,11 +86,11 @@
 		</li>
 		<li>
 			<div class="label-block"> <label for="manufacturer:phone">No. Telp</label> </div>
-			<div class="input-box"> <input type="text" id="manufacturer:phone" name="txtManufacturerPhone" placeholder="Phone" value="<?php echo $row_selectMan['man_phone']; ?>" /> </div> <span class="error_message"><?php echo $phoneErr; ?></span>
+			<div class="input-box"> <input type="text" id="manufacturer:phone" name="txtManufacturerPhone" placeholder="No. telp" value="<?php echo $row_selectMan['man_phone']; ?>" /> </div> <span class="error_message"><?php echo $phoneErr; ?></span>
 		</li>
 		<li>
 			<a href="change_password.php"><input type="button" value="Ubah Password" class="submit_button" /></a>
-			<input type="submit" value="Update Profile" class="submit_button" /> <span class="error_message"> <?php echo $requireErr; ?> </span><span class="confirm_message"> <?php echo $confirmMessage; ?> </span>
+			<input type="submit" value="Update Profil" class="submit_button" /> <span class="error_message"> <?php echo $requireErr; ?> </span><span class="confirm_message"> <?php echo $confirmMessage; ?> </span>
 		</li>
 		</ul>
 		</form>

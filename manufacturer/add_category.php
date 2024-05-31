@@ -19,15 +19,15 @@
 				if($categoryName != null) {
 					$query_addCategory = "INSERT INTO categories(cat_name,cat_details) VALUES('$categoryName','$categoryDetails')";
 					if(mysqli_query($con,$query_addCategory)) {
-						echo "<script> alert(\"Category Added Successfully\"); </script>";
+						echo "<script> alert(\"Kategori berhasil ditambahkan\"); </script>";
 						header('Refresh:0');
 					}
 					else {
-						$requireErr = "Adding New Category Failed";
+						$requireErr = "Gagal menambah kategori";
 					}
 				}
 				else {
-					$requireErr = "* Valid Category Name is required";
+					$requireErr = "* Nama kategori tidak valid";
 				}
 			}
 		}

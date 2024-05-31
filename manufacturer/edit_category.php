@@ -31,7 +31,7 @@
 					}
 				}
 				else {
-					$requireErr = "* Valid Category Name is required";
+					$requireErr = "* Nama kategori tidak valid";
 				}
 			}
 		}

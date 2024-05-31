@@ -25,15 +25,15 @@
 				if($unitName != null) {
 					$query_addUnit = "INSERT INTO unit(unit_name,unit_details) VALUES('$unitName','$unitDetails')";
 					if(mysqli_query($con,$query_addUnit)) {
-						echo "<script> alert(\"Unit Added Successfully\"); </script>";
+						echo "<script> alert(\"Unit berhasil ditambahkan\"); </script>";
 						header('Refresh:0');
 					}
 					else {
-						$requireErr = "Adding New Unit Failed";
+						$requireErr = "Gagal menambah unit";
 					}
 				}
 				else {
-					$requireErr = "* Valid Unit Name is required";
+					$requireErr = "* Nama unit tidak valid";
 				}
 			}
 		}
@@ -63,7 +63,7 @@
 		<ul class="form-list">
 		<li>
 			<div class="label-block"> <label for="unitName">Nama Unit</label> </div>
-			<div class="input-box"> <input type="text" id="unitName" name="txtUnitName" placeholder="Unit Name" value="<?php echo $unitNameHolder; ?>" required /> </div> <span class="error_message"><?php echo $unitNameErr; ?></span>
+			<div class="input-box"> <input type="text" id="unitName" name="txtUnitName" placeholder="Nama Unit" value="<?php echo $unitNameHolder; ?>" required /> </div> <span class="error_message"><?php echo $unitNameErr; ?></span>
 		</li>
 		<li>
 			<div class="label-block"> <label for="unitDetails">Detail</label> </div>

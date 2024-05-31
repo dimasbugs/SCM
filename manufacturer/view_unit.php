@@ -13,11 +13,11 @@
 						$result = mysqli_query($con,$query_deleteUnit);
 					}
 					if(!$result) {
-						echo "<script> alert(\"There was some problems deleting unit\"); </script>";
+						echo "<script> alert(\"Gagal menghapus unit\"); </script>";
 						header('Refresh:0');
 					}
 					else {
-						echo "<script> alert(\"Unit Deleted Successfully\"); </script>";
+						echo "<script> alert(\"Unit berhasil dihapus\"); </script>";
 						header('Refresh:0');
 					}
 				}
@@ -73,7 +73,7 @@
 			<?php $i++; } ?>
 		</table>
 		<input type="submit" value="Hapus" class="submit_button"/>
-		<a href="add_unit.php"><input type="button" value="+ Add Unit" class="submit_button"/></a>
+		<a href="add_unit.php"><input type="button" value="+ Tambah Unit" class="submit_button"/></a>
 		</form>
 	</section>
 	<?php

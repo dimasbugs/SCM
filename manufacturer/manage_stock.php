@@ -13,7 +13,7 @@
 						$result = mysqli_query($con,$queryUpdateStock);
 					}
 					if(!$result) {
-						$requireErr = "Update Produk Gagal";
+						$requireErr = "Update produk gagal";
 					}
 					else {
 						echo "<script> alert(\"Stok berhasil diupdate\"); </script>";

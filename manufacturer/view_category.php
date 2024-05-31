@@ -13,11 +13,11 @@
 						$result = mysqli_query($con,$query_deleteCategory);
 					}
 					if(!$result) {
-						echo "<script> alert(\"Categories assigned to any product can not be deleted\"); </script>";
+						echo "<script> alert(\"Tidak dapat menghapus kategori yang terpakai\"); </script>";
 						header('Refresh:0');
 					}
 					else {
-						echo "<script> alert(\"Category Deleted Successfully\"); </script>";
+						echo "<script> alert(\"Kategori berhasil dihapus\"); </script>";
 						header('Refresh:0');
 					}
 				}

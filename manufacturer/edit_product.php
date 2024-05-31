@@ -73,7 +73,7 @@
 					}
 				}
 				else {
-					$requireErr = "* All Fields are Compulsory with valid values except Description";
+					$requireErr = "* Semua kolom kecuali deskripsi harus diisi";
 				}
 			}
 		}

@@ -37,7 +37,7 @@
 					}
 				}
 				else {
-					$requireErr = "* Valid Unit Name is required";
+					$requireErr = "* Nama unit tidak valid";
 				}
 			}
 		}

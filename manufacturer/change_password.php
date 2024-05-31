@@ -18,23 +18,23 @@
 						if(strcmp($newPassword,$confirmPassword) == 0) {
 							$query_UpdatePassword = "UPDATE manufacturer SET password='$confirmPassword' WHERE man_id='$id'";
 							if(mysqli_query($con,$query_UpdatePassword)) {
-								echo "<script> alert(\"Password Updated Successfully\"); </script>";
+								echo "<script> alert(\"Password berhasil diupdate\"); </script>";
 								header("Refresh:0");
 							}
 							else {
-								$requireErr = "* Updating Password Failed";
+								$requireErr = "* Update password gagal";
 							}
 						}
 						else {
-							$matchErr = "* Password do not match";
+							$matchErr = "* Password tidak cocok";
 						}
 					}
 					else {
-						$requireErr = "* All Fields are required";
+						$requireErr = "* Kolom harus diisi";
 					}
 				}
 				else {
-					$oldPasswordErr = "* Old Password do not match";
+					$oldPasswordErr = "* Password lama tidak cocok";
 				}
 			}
 	}

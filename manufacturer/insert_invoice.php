@@ -42,12 +42,12 @@
 						header("Refresh:0;url=view_invoice_items.php?id=$invoice_id");
 					}
 					else {
-						echo "Can not update the status of order.";
+						echo "Tidak dapat mengupdate status pesanan";
 					}
 				}
 			}
 			else {
-				echo "There was some issue";
+				echo "Error";
 			}
 		}
 	}

@@ -57,7 +57,7 @@
 			<tr>
 				<th> ID Pesanan </th>
 				<th> Tanggal </th>
-				<th> Approved </th>
+				<th> Persetujuan </th>
 				<th> Status </th>
 				<th> Detail </th>
 			</tr>
@@ -70,10 +70,10 @@
 				<td>
 					<?php
 						if($row_selectOrder['approved'] == 0) {
-							echo "Not Approved";
+							echo "Tidak Disetujui";
 						}
 						else {
-							echo "Approved";
+							echo "Disetujui";
 						}
 					?>
 				</td>
