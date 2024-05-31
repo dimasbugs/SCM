@@ -42,11 +42,11 @@
 						header("Refresh:0");
 					}
 					else {
-						$requireErr = "Updating Retailer Failed";
+						$requireErr = "Update pelanggan gagal";
 					}
 				}
 				else {
-					$requireErr = "* Valid Phone number is compulsory";
+					$requireErr = "* No. telp tidak valid";
 				}
 		}
 	}

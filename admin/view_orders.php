@@ -24,7 +24,7 @@
 							}
 						}
 						else {
-							$error = "* Invalid ID";
+							$error = "* ID Invalid";
 						}
 					}
 					else if(!empty($_POST['cmbRetailer'])) {
@@ -87,11 +87,11 @@
 						}
 					}
 					else {
-						$error = "* Please enter the data to search for.";
+						$error = "* Pilih data yang akan dicari.";
 					}
 				}
 				else {
-					$error = "Please choose an option to search for.";
+					$error = "Pilih opsi yang akan dicari.";
 				}
 			}
 			else {

@@ -51,7 +51,7 @@
 						$result_selectInvoice = mysqli_query($con,$query_selectInvoice);
 						$row_selectInvoice = mysqli_fetch_array($result_selectInvoice);
 						if(empty($row_selectInvoice)){
-						   $error = "* TPelanggan pada Invoice tidak ditemukan";
+						   $error = "* Pelanggan pada Invoice tidak ditemukan";
 						}
 						else {
 							mysqli_data_seek($result_selectInvoice,0);

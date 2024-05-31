@@ -42,7 +42,7 @@
 		include("../includes/aside_retailer.inc.php");
 	?>
 	<section>
-		<h1 style="text-align:center;">Sales Invoice</h1>
+		<h1 style="text-align:center;">Invoice</h1>
 		<table class="table_infoFormat">
 		<tr>
 			<td><b> Invoice No: </b></td>

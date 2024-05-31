@@ -17,7 +17,7 @@
 			}
 		}
 		else{
-			echo "Total price not received.";
+			echo "Harga belum diterima.";
 		}
 	}
 	$query_insertOrder = "INSERT INTO orders(date,retailer_id,total_amount) VALUES('$currentDate','$retailer_id','$total_price')";
@@ -32,13 +32,13 @@
 				if($con->query($query_insertOrderItems) === true){
 				}
 				else {
-					echo "There was some error.";
+					echo "error.";
 				}
 			}
 		}
 	}
 	else{
-		echo "There was some error posting your order.";
+		echo "error dalam pemesanan.";
 	}
 	header('Location:view_my_orders.php?status=redirect');
 ?>

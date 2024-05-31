@@ -18,23 +18,23 @@
 						if(strcmp($newPassword,$confirmPassword) == 0) {
 							$query_UpdatePassword = "UPDATE retailer SET password='$confirmPassword' WHERE retailer_id='$id'";
 							if(mysqli_query($con,$query_UpdatePassword)) {
-								echo "<script> alert(\"Password Updated Successfully\"); </script>";
+								echo "<script> alert(\"Password berhasil diupdate\"); </script>";
 								header("Refresh:0");
 							}
 							else {
-								$requireErr = "* Updating Password Failed";
+								$requireErr = "* Update password gagal";
 							}
 						}
 						else {
-							$matchErr = "* Password do not match";
+							$matchErr = "* Password tidak cocok";
 						}
 					}
 					else {
-						$requireErr = "* All Fields are required";
+						$requireErr = "* Kolom harus diisi";
 					}
 				}
 				else {
-					$oldPasswordErr = "* Old Password do not match";
+					$oldPasswordErr = "* Password lama tidak cocok";
 				}
 			}
 	}
@@ -61,11 +61,11 @@
 		<ul class="form-list">
 		<li>
 			<div class="label-block"> <label for="oldPassword">Password Lama</label> </div>
-			<div class="input-box"> <input type="password" id="oldPassword" name="txtOldPassword" placeholder="Old Password" required /> </div> <span class="error_message"><?php echo $oldPasswordErr; ?></span>
+			<div class="input-box"> <input type="password" id="oldPassword" name="txtOldPassword" placeholder="Password Lama" required /> </div> <span class="error_message"><?php echo $oldPasswordErr; ?></span>
 		</li>
 		<li>
 			<div class="label-block"> <label for="newPassword">Password Baru</label> </div>
-			<div class="input-box"> <input type="password" id="newPassword" name="txtNewPassword" placeholder="New Password"  required /> </div>
+			<div class="input-box"> <input type="password" id="newPassword" name="txtNewPassword" placeholder="Password Baru"  required /> </div>
 		</li>
 		<li>
 			<div class="label-block"> <label for="confirmPassword">Konfirmasi Password</label> </div>

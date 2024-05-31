@@ -20,7 +20,7 @@
 					header('Location:retailer/index.php');
 				}
 				else {
-					$loginErr = "* Username or Password is incorrect.";
+					$loginErr = "* Username atau Password salah.";
 				}
 			}
 			else if($_SESSION['sessLogin_type'] == "manufacturer") {
@@ -36,7 +36,7 @@
 					header('Location:manufacturer/index.php');
 				}
 				else {
-					$loginErr = "* Username or Password is incorrect.";
+					$loginErr = "* Username atau Password salah.";
 				}
 			}
 			else if($_SESSION['sessLogin_type'] == "admin") {
@@ -50,12 +50,12 @@
 						header('Location:admin/index.php');
 					}
 					else {
-						$loginErr = "* Username or Password is incorrect.";
+						$loginErr = "* Username atau Password salah.";
 					}
 				}
 			}
 		else {
-			$reqErr = "* All fields are required.";
+			$reqErr = "* Kolom harus diisi";
 		}
 	}
 ?>

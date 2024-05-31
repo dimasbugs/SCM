@@ -16,14 +16,14 @@
 							$result_selectOrder = mysqli_query($con,$query_selectOrder);
 							$row_selectOrder = mysqli_fetch_array($result_selectOrder);
 							if(empty($row_selectOrder)){
-							   $error = "* No order was found with this ID";
+							   $error = "* ID pada invoice tidak ditemukan";
 							}
 							else {
 								mysqli_data_seek($result_selectOrder,0);
 							}
 						}
 						else {
-							$error = "* Invalid ID";
+							$error = "* ID Invalid";
 						}
 					}
 					else if(!empty($_POST['txtDate'])) {
@@ -32,7 +32,7 @@
 						$result_selectOrder = mysqli_query($con,$query_selectOrder);
 						$row_selectOrder = mysqli_fetch_array($result_selectOrder);
 						if(empty($row_selectOrder)){
-						   $error = "* No order was found with the selected Date";
+						   $error = "* Tanggal pada invoice tidak ditemukan";
 						}
 						else {
 							mysqli_data_seek($result_selectOrder,0);
@@ -50,7 +50,7 @@
 						$result_selectOrder = mysqli_query($con,$query_selectOrder);
 						$row_selectOrder = mysqli_fetch_array($result_selectOrder);
 						if(empty($row_selectOrder)){
-						   $error = "* No order was found";
+						   $error = "* Pesanan tidak ditemukan";
 						}
 						else {
 							mysqli_data_seek($result_selectOrder,0);
@@ -67,18 +67,18 @@
 						$result_selectOrder = mysqli_query($con,$query_selectOrder);
 						$row_selectOrder = mysqli_fetch_array($result_selectOrder);
 						if(empty($row_selectOrder)){
-						   $error = "* No order was found";
+						   $error = "* Pesanan tidak ditemukan";
 						}
 						else {
 							mysqli_data_seek($result_selectOrder,0);
 						}
 					}
 					else {
-						$error = "* Please enter the data to search for.";
+						$error = "*  Pilih data yang akan dicari.";
 					}
 				}
 				else {
-					$error = "Please choose an option to search for.";
+					$error = " Pilih opsi yang akan dicari.";
 				}
 			}
 			else {
@@ -130,7 +130,7 @@
 			<option value="id"> ID </option>
 			<option value="date"> Tanggal </option>
 			<option value="status"> Status </option>
-			<option value="approved"> Approval </option>
+			<option value="approved"> Persetujuan </option>
 			</select>
 			</div>
 			
@@ -146,8 +146,8 @@
 			<div class="input-box">
 			<select name="cmbApproved" id="cmbApproved" style="display:none;">
 				<option value="" disabled selected>-- Pilih Opsi --</option>
-				<option value="zero"> Not Approved </option>
-				<option value="1"> Approved </option>
+				<option value="zero"> Tidak Disetujui </option>
+				<option value="1"> Disetujui </option>
 			</select>
 			</div>
 			
@@ -159,7 +159,7 @@
 			<tr>
 				<th> ID Pesanan </th>
 				<th> Tanggal </th>
-				<th> Approved </th>
+				<th> Persetujuan </th>
 				<th> Status </th>
 				<th> Detail </th>
 			</tr>
@@ -172,10 +172,10 @@
 				<td>
 					<?php
 						if($row_selectOrder['approved'] == 0) {
-							echo "Not Approved";
+							echo "Tidak Disejui";
 						}
 						else {
-							echo "Approved";
+							echo "Disetujui";
 						}
 					?>
 				</td>
